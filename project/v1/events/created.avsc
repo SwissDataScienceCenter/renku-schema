@@ -24,14 +24,7 @@
     },
     {
       "name": "visibility",
-      "type": {
-        "type": "enum",
-        "name": "Visibility",
-        "symbols": [
-          "PUBLIC",
-          "PRIVATE"
-        ]
-      }
+      "type": "Visibility"
     },
     {
       "name": "description",
