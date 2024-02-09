@@ -11,11 +11,11 @@
       "type": "string"
     },
     {
-      "name": "datacontenttype",
+      "name": "dataContentType",
       "type": "string"
     },
     {
-      "name": "schemaversion",
+      "name": "schemaVersion",
       "type": "string"
     },
     {
@@ -26,7 +26,7 @@
       }
     },
     {
-      "name": "requestid",
+      "name": "requestId",
       "type": "string"
     }
   ]

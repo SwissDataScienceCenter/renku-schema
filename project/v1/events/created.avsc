@@ -3,6 +3,10 @@
   "name": "ProjectCreated",
   "fields": [
     {
+      "name":"id",
+      "type":"string"
+    },
+    {
       "name": "name",
       "type": "string"
     },
@@ -12,17 +16,22 @@
     },
     {
       "name": "repositories",
-      "type": "array",
-      "items": "string",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
       "default": []
     },
     {
       "name": "visibility",
-      "type": "enum",
-      "symbols": [
-        "public",
-        "private"
-      ]
+      "type": {
+        "type": "enum",
+        "name": "Visibility",
+        "symbols": [
+          "PUBLIC",
+          "PRIVATE"
+        ]
+      }
     },
     {
       "name": "description",
@@ -32,11 +41,11 @@
       ]
     },
     {
-      "name": "created_by",
+      "name": "createdBy",
       "type": "string"
     },
     {
-      "name": "creation_date",
+      "name": "creationDate",
       "type": {
         "type": "long",
         "logicalType": "timestamp-millis"
@@ -44,8 +53,10 @@
     },
     {
       "name": "members",
-      "type": "array",
-      "items": "string",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
       "default": []
     }
   ]
