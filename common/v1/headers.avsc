@@ -1,32 +1,37 @@
 {
-  "type":"record",
-  "name":"Header",
-  "fields":[
+  "type": "record",
+  "name": "Header",
+  "fields": [
     {
       "name": "source",
-      "type":"string"
+      "type": "string"
     },
     {
       "name": "type",
-      "type":"string"
+      "type": "string"
     },
     {
       "name": "datacontenttype",
-      "type":"enum",
-      "symbols":["application/avro+json","application/avro+binary"]
+      "type": "enum",
+      "symbols": [
+        "application/avro+json",
+        "application/avro+binary"
+      ]
     },
     {
-      "name":"schemaversion",
-      "type":"string"
+      "name": "schemaversion",
+      "type": "string"
     },
     {
-      "name":"time",
-      "type":"int",
-      "logicalType":"timestamp-millis"
+      "name": "time",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
     },
     {
-      "name":"requestid",
-      "type":"string"
+      "name": "requestid",
+      "type": "string"
     }
   ]
 }

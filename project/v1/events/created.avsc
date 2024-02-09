@@ -1,44 +1,52 @@
 {
-   "type":"record",
-   "name":"ProjectCreated",
-   "fields":[
-      {
-         "name":"name",
-         "type":"string"
-      },
-      {
-         "name":"slug",
-         "type":"string"
-      },
-      {
-         "name":"repositories",
-         "type":"array",
-         "items": "string",
-         "default":[]
-      },
-      {
-         "name":"visibility",
-         "type":"enum",
-         "symbols":["public","private"]
-      },
-      {
-         "name":"description",
-         "type":["null", "string"]
-      },
-      {
-         "name":"created_by",
-         "type":"string"
-      },
-      {
-         "name":"creation_date",
-         "type":"int",
-         "logicalType":"timestamp-millis"
-      },
-      {
-        "name":"members",
-        "type": "array",
-        "items":"string",
-        "default":[]
+  "type": "record",
+  "name": "ProjectCreated",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "slug",
+      "type": "string"
+    },
+    {
+      "name": "repositories",
+      "type": "array",
+      "items": "string",
+      "default": []
+    },
+    {
+      "name": "visibility",
+      "type": "enum",
+      "symbols": [
+        "public",
+        "private"
+      ]
+    },
+    {
+      "name": "description",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "created_by",
+      "type": "string"
+    },
+    {
+      "name": "creation_date",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
       }
-   ]
+    },
+    {
+      "name": "members",
+      "type": "array",
+      "items": "string",
+      "default": []
+    }
+  ]
 }
