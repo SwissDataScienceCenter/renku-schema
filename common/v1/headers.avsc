@@ -12,11 +12,7 @@
     },
     {
       "name": "datacontenttype",
-      "type": "enum",
-      "symbols": [
-        "application/avro+json",
-        "application/avro+binary"
-      ]
+      "type": "string"
     },
     {
       "name": "schemaversion",
