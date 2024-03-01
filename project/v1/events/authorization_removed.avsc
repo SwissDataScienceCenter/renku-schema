@@ -5,11 +5,11 @@
   "doc":"Event raised when an authorization for a project is removed for a user",
   "fields":[
     {
-      "name":"project_id",
+      "name":"projectId",
       "type":"string"
     },
     {
-      "name":"user_id",
+      "name":"userId",
       "type":"string"
     }
   ]

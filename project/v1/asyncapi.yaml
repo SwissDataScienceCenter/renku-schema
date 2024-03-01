@@ -44,7 +44,7 @@ channels:
               - $ref: './events/removed.avsc#/ProjectRemoved'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  project_auth.added:
+  projectAuth.added:
     publish:
       messages:
         projectAuthAdded:
@@ -56,7 +56,7 @@ channels:
               - $ref: './events/authorization_added.avsc#/ProjectAuthorizationAdded'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  project_auth.updated:
+  projectAuth.updated:
     publish:
       messages:
         projectAuthUpdated:
@@ -68,7 +68,7 @@ channels:
               - $ref: './events/authorization_updated.avsc#/ProjectAuthorizationUpdated'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  project_auth.removed:
+  projectAuth.removed:
     publish:
       messages:
         projectAuthRemoved:

@@ -9,11 +9,11 @@
       "type":"string",
     },
     {
-      "name": "first_name",
+      "name": "firstName",
       "type":"string"
     },
     {
-      "name":"last_name",
+      "name":"lastName",
       "type":"string"
     },
     {
