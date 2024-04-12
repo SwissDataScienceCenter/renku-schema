@@ -36,6 +36,17 @@
       ]
     },
     {
+      "name": "keywords",
+      "type": [
+        "null",
+        {
+            "type": "array",
+            "items": "string"
+        }
+      ],
+      "default": []
+    },
+    {
       "name": "createdBy",
       "type": "string"
     },
