@@ -37,13 +37,10 @@
     },
     {
       "name": "keywords",
-      "type": [
-        "null",
-        {
-          "type": "array",
-          "items": "string"
-        }
-      ],
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
       "default": []
     }
   ]
