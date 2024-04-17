@@ -1,8 +1,8 @@
 {
   "type":"record",
-  "name":"ProjectAuthorizationAdded",
+  "name":"ProjectAuthorizationUpdated",
   "namespace":"io.renku.events.v2",
-  "doc":"Event raised when an authorization for a project is added for a user",
+  "doc":"Event raised when an authorization for a project is modified",
   "fields":[
     {
       "name":"projectId",
@@ -14,7 +14,7 @@
     },
     {
       "name": "role",
-      "type": "io.renku.events.v2.ProjectMemberRole"
+      "type": "io.renku.events.v2.MemberRole"
     }
   ]
 }

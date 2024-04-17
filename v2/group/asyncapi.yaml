@@ -56,6 +56,18 @@ channels:
                 - $ref: './events/member_added.avsc#/MemberGroupAdded'
           traits:
             - $ref: '#/components/messageTraits/headers'
+  memberGroup.updated:
+    publish:
+      messages:
+        memberGroupUpdated:
+          schemaFormat: "application/vnd.apache.avro;version=1.9.0"
+          payload:
+            type: object
+            properties:
+              payload:
+                - $ref: './events/member_added.avsc#/MemberGroupUpdated'
+          traits:
+            - $ref: '#/components/messageTraits/headers'
   memberGroup.removed:
     publish:
       messages:
@@ -77,4 +89,4 @@ components:
           id:
             type: string
           headers:
-            - $ref: '../../common/v2/headers.avsc#/Header'
+            - $ref: '../common/headers.avsc#/Header'

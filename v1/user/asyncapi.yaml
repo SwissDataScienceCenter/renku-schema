@@ -1,6 +1,6 @@
 asyncapi: 3.0.0
 info:
-  title: User Events
+  title: Project Events
   version: 0.0.1
 servers:
   redis:
@@ -41,7 +41,7 @@ channels:
             type: object
             properties:
               payload:
-              - $ref: './events/removed.avsc#/UserRemoved'
+              - $ref: './events/created.avsc#/UserRemoved'
           traits:
           - $ref: '#/components/messageTraits/headers'
 components:
@@ -53,4 +53,4 @@ components:
           id:
             type: string
           headers:
-            - $ref: '../../common/v2/headers.avsc#/Header'
+            - $ref: '../common/headers.avsc#/Header'

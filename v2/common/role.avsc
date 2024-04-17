@@ -1,10 +1,10 @@
 {
   "type":"enum",
-  "name":"ProjectMemberRole",
+  "name":"MemberRole",
   "namespace":"io.renku.events.v2",
-  "doc":"Access role of a project member",
+  "doc":"Access role of a member",
   "symbols":[
-    "MEMBER",
+    "OWNER",
     "EDITOR",
     "VIEWER"
   ]
