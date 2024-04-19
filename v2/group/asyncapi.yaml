@@ -89,4 +89,4 @@ components:
           id:
             type: string
           headers:
-            - $ref: '../common/headers.avsc#/Header'
+            - $ref: '../../header/headers.avsc#/Header'
