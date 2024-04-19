@@ -44,40 +44,40 @@ channels:
               - $ref: './events/removed.avsc#/ProjectRemoved'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  projectAuth.added:
+  projectMember.added:
     publish:
       messages:
-        projectAuthAdded:
+        projectMemberAdded:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/authorization_added.avsc#/ProjectAuthorizationAdded'
+              - $ref: './events/member_added.avsc#/ProjectMemberAdded'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  projectAuth.updated:
+  projectMember.updated:
     publish:
       messages:
-        projectAuthUpdated:
+        projectMemberUpdated:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/authorization_updated.avsc#/ProjectAuthorizationUpdated'
+              - $ref: './events/member_updated.avsc#/ProjectMemberUpdated'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  projectAuth.removed:
+  projectMember.removed:
     publish:
       messages:
-        projectAuthRemoved:
+        projectMemberRemoved:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/authorization_removed.avsc#/ProjectAuthorizationRemoved'
+              - $ref: './events/member_removed.avsc#/ProjectMemberRemoved'
           traits:
           - $ref: '#/components/messageTraits/headers'
 components:

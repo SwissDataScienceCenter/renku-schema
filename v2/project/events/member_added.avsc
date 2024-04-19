@@ -1,8 +1,8 @@
 {
   "type":"record",
-  "name":"ProjectAuthorizationAdded",
+  "name":"ProjectMemberAdded",
   "namespace":"io.renku.events.v2",
-  "doc":"Event raised when an authorization for a project is added for a user",
+  "doc":"Event raised when a user is added to a project",
   "fields":[
     {
       "name":"projectId",
