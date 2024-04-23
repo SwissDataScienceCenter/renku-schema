@@ -1,85 +1,85 @@
 asyncapi: 3.0.0
 info:
-  title: Project Events
-  version: 0.0.1
+  title: Group Events
+  version: 0.0.2
 servers:
   redis:
     url: renku-redis
     protocol: redis
     description: Renku Redis Instance
 channels:
-  project.created:
+  group.added:
     publish:
       messages:
-        projectCreated:
+        groupAdded:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/created.avsc#/ProjectCreated'
+              - $ref: './events/added.avsc#/GroupAdded'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  project.updated:
+  group.updated:
     publish:
       messages:
-        projectUpdated:
+        groupUpdated:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/updated.avsc#/ProjectUpdated'
+              - $ref: './events/created.avsc#/GroupUpdated'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  project.removed:
+  group.removed:
     publish:
       messages:
-        projectRemoved:
+        groupRemoved:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/removed.avsc#/ProjectRemoved'
+              - $ref: './events/removed.avsc#/GroupRemoved'
           traits:
           - $ref: '#/components/messageTraits/headers'
-  projectAuth.added:
+  memberGroup.added:
     publish:
       messages:
-        projectAuthAdded:
+        memberGroupAdded:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/authorization_added.avsc#/ProjectAuthorizationAdded'
+                - $ref: './events/member_added.avsc#/GroupMemberAdded'
           traits:
-          - $ref: '#/components/messageTraits/headers'
-  projectAuth.updated:
+            - $ref: '#/components/messageTraits/headers'
+  memberGroup.updated:
     publish:
       messages:
-        projectAuthUpdated:
+        memberGroupUpdated:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/authorization_updated.avsc#/ProjectAuthorizationUpdated'
+                - $ref: './events/member_added.avsc#/GroupMemberUpdated'
           traits:
-          - $ref: '#/components/messageTraits/headers'
-  projectAuth.removed:
+            - $ref: '#/components/messageTraits/headers'
+  memberGroup.removed:
     publish:
       messages:
-        projectAuthRemoved:
+        memberGroupRemoved:
           schemaFormat: "application/vnd.apache.avro;version=1.9.0"
           payload:
             type: object
             properties:
               payload:
-              - $ref: './events/authorization_removed.avsc#/ProjectAuthorizationRemoved'
+                - $ref: './events/member_removed.avsc#/GroupMemberRemoved'
           traits:
-          - $ref: '#/components/messageTraits/headers'
+            - $ref: '#/components/messageTraits/headers'
 components:
   messageTraits:
     headers:
@@ -89,4 +89,4 @@ components:
           id:
             type: string
           headers:
-            - $ref: '../../common/v1/headers.avsc#/Header'
+            - $ref: '../../header/headers.avsc#/Header'
