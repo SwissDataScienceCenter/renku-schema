@@ -8,7 +8,7 @@ servers:
     protocol: redis
     description: Renku Redis Instance
 channels:
-  search.snc:
+  search.sync:
     messages:
       syncEvent:
         payload:
