@@ -29,6 +29,8 @@ channels:
             - $ref: './project/events/member_added.avsc#/ProjectMemberAdded'
             - $ref: './project/events/member_updated.avsc#/ProjectMemberUpdated'
             - $ref: './project/events/member_removed.avsc#/ProjectMemberRemoved'
+            - $ref: './notify/events/reprovisioning_started.asvc#/ReprovisioningStarted'
+            - $ref: './notify/events/reprovisioning_finished.asvc#/ReprovisioningFinished'
         traits:
         - $ref: '#/components/messageTraits/headers'
 
